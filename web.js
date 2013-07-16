@@ -1,11 +1,13 @@
-B77;10103;0cvar express = require('express');
+#!/usr/bin/env node
+
+var express = require('express');
 
 var app = express.createServer(express.logger());
 var fs = require('fs');
 var infile = "index.html";
-var text = fs.readFile(infile, 'utf8');
+var text = fs.readFile(infile).toString();
 app.get('/', function(request, response) {
-  response.send('temp');
+  response.send(text);
 });
 
 var port = process.env.PORT || 5000;
