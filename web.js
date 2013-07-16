@@ -1,9 +1,9 @@
 var express = require('express');
 
 var app = express.createServer(express.logger());
-//var fs = require('fs');
-v//ar infile = "index.html";
-v//ar text = fs.readFile(infile).toString('utf-8');
+var fs = require('fs');
+var infile = "index.html";
+var text = fs.readFile(infile).toString('utf-8');
 app.get('/', function(request, response) {
   response.send('temp');
 });
