@@ -1,7 +1,7 @@
 B77;10103;0cvar express = require('express');
 
 var app = express.createServer(express.logger());
-//varr fs = require('fs');
+var fs = require('fs');
 var infile = "index.html";
 var text = fs.readFile(infile, 'utf8');
 app.get('/', function(request, response) {
